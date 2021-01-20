@@ -33,7 +33,7 @@ class Room_categories(models.Model):
     
 
     def __str__(self):
-        return f'{self.hotel}. {self.categorie}'
+        return f'{self.hotel.h_name}. {self.categorie}'
 
 
 
@@ -48,7 +48,7 @@ class Room(models.Model):
     image = models.FileField(blank=True)
 
     def __str__(self):
-        return f'{self.number}.{self.category} with {self.bed} beds for {self.Capacity} people'
+        return f'{self.hotel}.{self.category} with {self.no_bed} beds for {self.no_guest} people'
 
 class Images(models.Model):
     room = models.ForeignKey(Room, default=None, on_delete=models.CASCADE)
