@@ -45,9 +45,20 @@ class Room(models.Model):
     no_guest =models.IntegerField()
     t_number = models.IntegerField()
     price = models.IntegerField()
+    image = models.FileField(blank=True)
 
     def __str__(self):
         return f'{self.number}.{self.category} with {self.bed} beds for {self.Capacity} people'
+
+class Images(models.Model):
+    room = models.ForeignKey(Room, default=None, on_delete=models.CASCADE)
+    image_1 = models.FileField()
+    image_2 = models.FileField()
+    image_3 = models.FileField()
+    image_5 = models.FileField()
+
+    def __str__(self):
+        return self.room.title
 
 
 class Booking(models.Model):
@@ -55,6 +66,7 @@ class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     check_in = models.DateTimeField()
     check_out = models.DateTimeField()
+    status = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.user} has book'
