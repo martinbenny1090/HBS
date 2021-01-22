@@ -2,26 +2,21 @@ from django.db import models
 from django.conf import settings
 
 # Create your models here.
-class Cities(models.Model):
-    c_id = models.AutoField(primary_key=True)
-    city = models.CharField(max_length=150, null=True, blank=True)
-
-    def __str__(self):
-        return f'{self.city}'
 
 class Popularlocations(models.Model):
     p_id = models.AutoField(primary_key=True)
-    city = models.ForeignKey(Cities, on_delete=models.CASCADE)
     places = models.CharField(max_length=150, null=True, blank=True)
 
     def __str__(self):
-        return f'{self.places} in {self.city}'
+        return f'{self.places}'
 
 class Hotels(models.Model):
     h_id = models.AutoField(primary_key=True)
     location = models.ForeignKey(Popularlocations, on_delete=models.CASCADE)
     h_name = models.CharField(max_length=300, null=True, blank=True)
     landmark = models.CharField(max_length=300, blank=True)
+    phone_no = models.CharField(max_length=12)
+    address = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return f'{self.h_id} {self.h_name}'
