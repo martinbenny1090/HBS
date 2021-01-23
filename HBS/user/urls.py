@@ -1,8 +1,10 @@
 from django.urls import path
 from . import views
-from user.views import  search, index
+from user.views import index
+
+app_name = "user"
 
 urlpatterns = [
     path("", index.as_view(), name='index'),
-    path("search/", search.as_view(), name="search"),
+    path('login', views.login, name="login"),
 ]
