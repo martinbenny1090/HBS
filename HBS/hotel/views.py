@@ -8,3 +8,7 @@ class hotel_list(View):
         hotels = Hotels.objects.all()
         return render(request, 'hotel/hotel-list.html', {'hotels':hotels})
 
+class city(View):
+    def get(self, request):
+        citys = Popularlocations.objects.all()
+        return render(request, 'hotel/City.html', {'citys':citys})

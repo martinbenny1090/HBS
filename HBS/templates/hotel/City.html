@@ -2,33 +2,28 @@
 
 {% block content %}
 
-<h1>hotels</h1>
+<h1>City List</h1>
+<div class="container">
 
     <table class="table">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Hotel name</th>
-                <th>Hotel address</th>
-                <th>Location</th>
-                <th>landmark</th>
-                <th>phone_No</th>
+                <th>Id</th>
+                <th>City name</th>
+                <th><a class="btn btn-primary " href=""> New </a></th>
             </tr>
         </thead>
-        <!-- <tbody>
-            {% for h in hotels %}
+        <tbody>
+            {% for c in citys %}
             <tr>
-                <th scope="row"> {{ forloop.counter }}</th>
-                <td>{{h.h_name}}</td>
-                <td>{{h.address}}</td>
-                <td>{{h.location}}</td>
-                <td>{{h.landmark}}</td>
-                <td>{{h.phone_no}}</td>
+                <th scope="row"> {{ c.p_id }}</th>
+                <td>{{c.places}}</td>
             </tr>
             {% endfor %}
-        </tbody> -->
+        </tbody>
 
     </table>
- 
+     
+</div>
 
 {% endblock %}
