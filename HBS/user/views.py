@@ -33,7 +33,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             if User.objects.filter(username=email, is_staff="True", is_superuser="False").exists():
-                return redirect("hotel:hotel-list")
+                return redirect("hotel:home")
             # elif User.objects.filter(username=email, is_staff="True").exists():is_superuser="True"
             #     # messages.info(request,'Admin page')
             #     return render(request, 'hotel-list.html')
@@ -47,3 +47,7 @@ def login(request):
 
     else:
         return render(request, 'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')

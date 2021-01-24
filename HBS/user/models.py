@@ -8,7 +8,7 @@ class Popularlocations(models.Model):
     places = models.CharField(max_length=150, null=True, blank=True)
 
     def __str__(self):
-        return f'{self.places}'
+        return f'{self.p_id}.{self.places}'
 
 class Hotels(models.Model):
     h_id = models.AutoField(primary_key=True)
@@ -23,12 +23,11 @@ class Hotels(models.Model):
 
 class Room_categories(models.Model):
     ca_id = models.AutoField(primary_key=True)
-    hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE)
     categorie = models.CharField(max_length=150)
     
 
     def __str__(self):
-        return f'{self.hotel.h_name}. {self.categorie}'
+        return f'{self.categorie}'
 
 
 

@@ -5,7 +5,7 @@
 {% block content %}
 
 <h1>hotels</h1>
-
+<div class="container">
     <table class="table">
         <thead>
             <tr>
@@ -15,6 +15,7 @@
                 <th>Location</th>
                 <th>landmark</th>
                 <th>phone_No</th>
+                <th><a class="btn btn-primary " href="{% url 'hotel:new-hotel' %}"> New </a></th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,6 @@
         </tbody>
 
     </table>
- 
+</div>
 
 {% endblock %}

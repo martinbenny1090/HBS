@@ -16,3 +16,26 @@ class city(View):
 class home(View):
     def get(self, request):
         return render(request, 'hotel/home.html')
+
+class Newhotel(View):
+    def get(self, request):
+        city = Popularlocations.objects.all()
+        return render(request, 'hotel/new-hotel.html', {'city':city})
+
+    def post(self, request):
+        h_name = request.POST.get('h_name')
+        address = request.POST.get('address')
+        location = request.POST.get('location')
+        landmark = request.POST.get('landmark')
+        phone_no = request.POST.get('phone_no')
+
+        pop_location = Popularlocations.objects.get(p_id=location)
+        print(pop_location)
+        Hotels.objects.create(
+            location=pop_location,
+            h_name=h_name,
+            landmark=landmark,
+            phone_no=phone_no,
+            address=address
+        )
+        return redirect("hotel:hotel-list")
