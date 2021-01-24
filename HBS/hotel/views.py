@@ -12,3 +12,7 @@ class city(View):
     def get(self, request):
         citys = Popularlocations.objects.all()
         return render(request, 'hotel/City.html', {'citys':citys})
+
+class home(View):
+    def get(self, request):
+        return render(request, 'hotel/home.html')
