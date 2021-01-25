@@ -1,0 +1,28 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+
+<h1>Room Management</h1>
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Room no</th>
+                <th>Room Features</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rmag %}
+            <tr>
+                <th scope="row"> {{ c.rm_id }}</th>
+                <td>{{c.r_no}}</td>
+                <td><a href="" {{c.room_features}}></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+
+<h1>Room details</h1>
+<div class="container">
+    <form action="room-details" method="POST" >
+            {% csrf_token %}
+            <table class="table table-borderless">
+                    <thead>
+                            <a type="button" class="btn btn-secondary float-right mx-3" href=""> Back </a>
+                    </thead>
+                    <tbody>       
+                    <tr>
+                    <td><label> Hotel Name </label></td>
+                    <td> <input type="text" class="form-control" id="h_name" name='h_name' placeholder="Hotel Name" required> </td> 
+                    
+                    </tr>
+                    <tr>
+                            <td><label> Room Type </label></td>
+                            <td> <input type="text" class="form-control" id="room_type" name="room_type" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                            <td><label> Room No </label></td>
+                            <td> <input type="text" class="form-control" id="landmark" name="landmark" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Price </label></td>
+                        <td> <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Discount </label></td>
+                        <td> <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Tax </label></td>
+                        <td> <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Image </label></td>
+                        <td> <input type="file" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Image1 </label></td>
+                        <td> <input type="file" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Image2 </label></td>
+                        <td> <input type="file" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Image3 </label></td>
+                        <td> <input type="file" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    <tr>
+                        <td><label> Description </label></td>
+                        <td> <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="" required> </td> 
+                    </tr>
+                    
+
+                    <tr>
+                    <td colspan="2"><button type="submit" class="btn btn-success">Submit</button></td>
+                    </tr>
+                    </tbody>
+            </table>
+    </form>
+</div>
+
+
+{% endblock %}

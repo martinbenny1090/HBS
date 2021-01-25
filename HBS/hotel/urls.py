@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from hotel.views import hotel_list, city, home, Newhotel
+from hotel.views import hotel_list,city,home,Newhotel,booking,room_details
 
 app_name = 'hotel'
 urlpatterns = [
@@ -8,4 +8,6 @@ urlpatterns = [
     path('hotel-list', hotel_list.as_view(), name="hotel-list"),
     path('city', city.as_view(), name="city"),
     path('new-hotel', Newhotel.as_view(), name="new-hotel"),
+    path('room-details', room_details.as_view(), name="room-details"),
+    path('booking', booking.as_view(), name="booking"),
 ]

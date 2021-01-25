@@ -39,3 +39,14 @@ class Newhotel(View):
             address=address
         )
         return redirect("hotel:hotel-list")
+
+class booking(View):
+    def get(self, request):
+        return render(request, 'hotel/booking.html')    
+
+
+
+class room_details(View):
+    def get(self, request):
+        r = Room.objects.all()
+        return render(request, 'hotel/room-details.html', {'r':r})  
