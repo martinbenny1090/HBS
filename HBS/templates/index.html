@@ -20,7 +20,7 @@
     <div class="header__right-authSection">
         <img src="{% static '/images/user.svg' %}" alt="" class="pro_img">
         <div class="btn_group">
-            <button class="btn_border">Login</button>
+            <a href="{% url 'user:login' %}"><button class="btn_border">Login</button></a>
             <button>Sign Up</button>
         </div>
     </div>
