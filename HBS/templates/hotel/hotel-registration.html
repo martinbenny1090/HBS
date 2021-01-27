@@ -1,0 +1,27 @@
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles_hotel_signup.css' %}">
+    <title>ADITI | HOTEL SIGN-UP</title>
+</head>
+<body>
+    <div class="card">
+        <h1 class="header">Create Account</h1>
+        <input type="text" name="hname" id="hname" placeholder="Hotel Name">
+        <input type="text" name="loc" id="loc" placeholder="Location">
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <input type="email" name="cemail" id="c_email" placeholder="Re-enter E-mail"><br>
+        <input type="tel" name="zip" id="zip" placeholder="ZIP Code"><br>
+        <input type="password" name="pass" id="pass" placeholder="Password"><br>
+        <input type="password" name="cpass" id="c_pass" placeholder="Confirm Password">
+        <button>SIGN UP</button>
+    </div>
+</body>
+</html>
+{% endblock %}
