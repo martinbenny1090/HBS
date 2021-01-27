@@ -1,91 +1,136 @@
-{% extends 'base.html' %}
+{% load static %}
 
 
-{% block title %} Welcome to HBS {% endblock %}
 
 {% block content %}   
-  <div class="container ie-h-align-center-fix">
-    <div class="row">
-        <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
-            <form method="" class="tm-search-form tm-section-pad-2">
-                {% csrf_token %}
-                <div class="form-row tm-search-form-row">
-                    <div class="form-group tm-form-element tm-form-element-100">
-                        <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
-                        <input name="loc" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
-                    </div>
-                    <div class="form-group tm-form-element tm-form-element-50">
-                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                        <input name="check_in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
-                    </div>
-                    <div class="form-group tm-form-element tm-form-element-50">
-                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                        <input name="check_out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
-                    </div>
-                </div>
-                <div class="form-row tm-search-form-row">
-                    <div class="form-group tm-form-element tm-form-element-2">                                            
-                        <select name="adult" class="form-control tm-select" id="adult">
-                            <option value="">Adult</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                    </div>
-                    <div class="form-group tm-form-element tm-form-element-2">                                            
-                        <select name="children" class="form-control tm-select" id="children">
-                            <option value="">Children</option>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
-                    </div>
-                    <div class="form-group tm-form-element tm-form-element-2">
-                        <select name="room" class="form-control tm-select" id="room">
-                            <option value="">Room</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
-                    </div>
-                    <div class="form-group tm-form-element tm-form-element-2">
-                        <button type="submit" class="btn btn-primary tm-btn-search">Check Availability</button>
-                    </div>
-                  </div>
-                  <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                      <p class="tm-margin-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      <a href="#" class="ie-10-ml-auto ml-auto mt-1 tm-font-semibold tm-color-primary">Need Help?</a>
-                  </div>
-            </form>
-        </div>                        
-    </div>      
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi | Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="./js/index.js"></script>
+</head>
+<header class="header">
+    <div></div>
+    <div class="header__right-authSection">
+        <img src="{% static '/images/user.svg' %}" alt="" class="pro_img">
+        <div class="btn_group">
+            <button class="btn_border">Login</button>
+            <button>Sign Up</button>
+        </div>
+    </div>
+</header>
+
+<div class="master__options">
+    
+    <div class="options">
+        <select name="cars" id="location">
+            <option disabled selected >Choose Location</option>
+            <option value="volvo" >Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select name="cars" id="checkin">
+            <option disabled selected>Check-In</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select name="cars" id="checkout">
+            <option disabled selected>Check-Out</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select name="cars" id="rooms">
+            <option disabled selected>Rooms</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select name="cars" id="adults">
+            <option disabled selected>Adults</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <select name="cars" id="children">
+            <option disabled selected>Children</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <button class="search">SEARCH</button>
+    </div>
 </div>
 
+<body>
+    <div class="hero__container">
+        <div class="wrapper">
+            <div class="display-tiles">
+                <div class="content">
+                    <div class="item">
+                        <strong class="alert">PREMIUM</strong><br>
+                        <strong>HOTELS</strong>
+                    </div>
+                    <div class="subContent">
+                        <h6>TAILOR-MADE <br> FOR YOU</h6>
+                    </div>
+                    <button class="explore">
+                        EXPLORE NOW
+                    </button>
+                </div>
+                <img src="{% static '/images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="display-tiles">
+                <div class="content">
+                    <div class="item">
+                        <strong>ROOMS <br> FOR</strong>
+                        <strong class="alert">TWO</strong>
+                    </div>
+                    <div class="subContent">
+                        <h6>SPEND GREAT <br> TIME TOGETHER</h6>
+                    </div>
+                    <button class="explore">
+                        EXPLORE NOW
+                    </button>
+                </div>
+                <img src="{% static '/images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="offer-tiles">
+                <h1>
+                    80
+                    <span>
+                        <div><small>%</small></div>
+                    </span>
+                    <span>
+                        <div><small>off</small></div>
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="content__holder">
+         <img src="/src/assets/images/content1.jpg" alt=""> 
+        <div class="content-wrapper">
+            
+        </div>
+    </div> -->
+
+</body>
+
+</html>
 
 {% endblock %}
 
