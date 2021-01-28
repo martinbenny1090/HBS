@@ -1,18 +1,18 @@
 {% load static %}
 
 
-{% block content %}
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=" {% static 'css/styles_hotel_login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesHotelLogin.css' %}">
     <title>ADITI | HOTEL LOGIN</title>
 </head>
 <body>
+    <div class="homeSec">
+        <a href="/"><img src="{% static 'images/home.svg' %}" alt="" class="home"></a>
+    </div>
     <div class="card">
         <h3 class="header">Hotel Log In</h3>
         <div class="inputs">
@@ -21,11 +21,9 @@
         </div>
         <div class="auth_helper">
             <a href="#">Forgot Password</a>
-            <a href="#">Not a member yet?</a>
+            <a href="{% url 'accounts:h_register' %}">Not a member yet?</a>
         </div>
         <button>SIGN IN</button>
     </div>
 </body>
 </html>
-
-{% endblock %}

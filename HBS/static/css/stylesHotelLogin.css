@@ -10,7 +10,30 @@
 }
 
 body {
-    background: url(/src/assets/images/hotelBg.jpeg);
+    background: url(hotelBg.jpeg);
+}
+
+.homeSec {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background-color: #fff; */
+    top: 20px;
+    left: 20px;
+}
+
+.homeSec a {
+    text-decoration: none;
+}
+
+.homeSec a .home {
+    width: 40px;
+    height: 40px;
+    opacity: .7;
+}
+
+.homeSec a .home:hover {
+    opacity: 1;
 }
 
 .card {

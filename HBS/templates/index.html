@@ -1,9 +1,6 @@
 {% load static %}
 
 
-
-{% block content %}   
-  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditi | Home</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesHome.css' %}">
     <script src="{% static 'js/index.js' %}"></script>
-    
 </head>
 <header class="header">
     <div></div>
@@ -27,52 +23,84 @@
 </header>
 
 <div class="master__options">
-    
+
     <div class="options">
         <select name="cars" id="location">
-            <option disabled selected >Choose Location</option>
-            <option value="volvo" >Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option disabled selected>Choose Location</option>
+            <option value="">Addu City</option>
+            <option value="">Dhidhdhoo</option>
+            <option value="">Kulhudhuffushi</option>
+            <option value="">Eydhafushi</option>
+            <option value="">Farukolhufunadhoo</option>
+            <option value="">Felidhoo</option>
+            <option value="">Funadhoo</option>
+            <option value="">Fuvahmulah</option>
+            <option value="">Gan</option>
+            <option value="">Hinnavaru</option>
+            <option value="">Hithadhoo</option>
+            <option value="">Hulhumalé</option>
+            <option value="">Hulhumeedhoo</option>
+            <option value="">Kudahuvadhoo</option>
+            <option value="">Magoodhoo</option>
+            <option value="">Mahibadhoo</option>
+            <option value="">Malé</option>
+            <option value="">Manadhoo</option>
+            <option value="">Maroshi</option>
+            <option value="">Meedhoo</option>
+            <option value="">Mula</option>
+            <option value="">Naifaru</option>
+            <option value="">Nolhivaranfaru</option>
+            <option value="">Thinadhoo</option>
+            <option value="">Ungoofaaru</option>
+            <option value="">Veymandhoo</option>
+            <option value="">Veymandoo</option>
+            <option value="">Viligili</option>
+
         </select>
-        <select name="cars" id="checkin">
-            <option disabled selected>Check-In</option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-        </select>
-        <select name="cars" id="checkout">
-            <option disabled selected>Check-Out</option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-        </select>
+        
+        <input type="date" name="checkin" id="checkin" placeholder="Check-In">
+        
+        <input type="date" name="checkout" id="checkout" placeholder="Check-Out">
         <select name="cars" id="rooms">
             <option disabled selected>Rooms</option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="">Single </option>
+            <option value="">Double</option>
+            <option value="">Triple</option>
+            <option value="">Quad</option>
+            <option value="">Queen</option>
+            <option value="">King</option>
+            <option value="">Twin</option>
+            <option value="">Double-double</option>
+            <option value="">Studio</option>
         </select>
         <select name="cars" id="adults">
             <option disabled selected>Adults</option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+            <option value="">7</option>
+            <option value="">8</option>
+            <option value="">9</option>
+            <option value="">10</option>
         </select>
         <select name="cars" id="children">
             <option disabled selected>Children</option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">More than 5</option>
         </select>
         <button class="search">SEARCH</button>
     </div>
+</div>
+
+<div class="hostSec">
+    <a href="{% url 'accounts:hotel_login' %}"><img src="{% static '/images/admin.svg' %}" alt="" class="host"></a>
 </div>
 
 <body>
@@ -91,7 +119,7 @@
                         EXPLORE NOW
                     </button>
                 </div>
-                <img src="{% static '/images/tile1.jpg' %}" alt="">
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
             </div>
             <div class="display-tiles">
                 <div class="content">
@@ -106,7 +134,7 @@
                         EXPLORE NOW
                     </button>
                 </div>
-                <img src="{% static '/images/tile1.jpg' %}" alt="">
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
             </div>
             <div class="offer-tiles">
                 <h1>
@@ -122,16 +150,43 @@
         </div>
     </div>
 
-    <!-- <div class="content__holder">
-         <img src="/src/assets/images/content1.jpg" alt=""> 
-        <div class="content-wrapper">
-            
+    <div class="content__holder">
+        <img class="background" src="{% static 'images/content1.jpg' %}" alt="">
+        <div class="content-heading">
+            <h3>POPULAR CITIES IN MALDIVES</h3>
         </div>
-    </div> -->
+        <div class="city_tiles">
+            <div class="block">
+                <h1 class="header-text">City1</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City2</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City3</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City4</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City5</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City6</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+            <div class="block">
+                <h1 class="header-text">City7</h1>
+                <img src="{% static 'images/tile1.jpg' %}" alt="">
+            </div>
+        </div>
+    </div>
 
 </body>
 
 </html>
-
-{% endblock %}
-

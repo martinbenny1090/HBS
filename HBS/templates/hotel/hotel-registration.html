@@ -1,16 +1,18 @@
 {% load static %}
 
 
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles_hotel_signup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesHotelSignup.css' %}">
     <title>ADITI | HOTEL SIGN-UP</title>
 </head>
 <body>
+    <div class="homeSec">
+        <a href="/"><img src="{% static 'images/home.svg' %}" alt="" class="home"></a>
+    </div>
     <div class="card">
         <h1 class="header">Create Account</h1>
         <input type="text" name="hname" id="hname" placeholder="Hotel Name">
@@ -21,7 +23,7 @@
         <input type="password" name="pass" id="pass" placeholder="Password"><br>
         <input type="password" name="cpass" id="c_pass" placeholder="Confirm Password">
         <button>SIGN UP</button>
+        <a href="{% url 'accounts:hotel_login' %}" class="cancel">CANCEL</a>
     </div>
 </body>
 </html>
-{% endblock %}

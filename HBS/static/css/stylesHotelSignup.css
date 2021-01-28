@@ -10,7 +10,30 @@
 }
 
 body {
-    background: url(/src/assets/images/si.jpg);
+    background: url(si.jpg);
+}
+
+.homeSec {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background-color: #fff; */
+    top: 20px;
+    left: 20px;
+}
+
+.homeSec a {
+    text-decoration: none;
+}
+
+.homeSec a .home {
+    width: 40px;
+    height: 40px;
+    opacity: .7;
+}
+
+.homeSec a .home:hover {
+    opacity: 1;
 }
 
 .card {
@@ -74,4 +97,12 @@ body {
     color: var(--secondary-color);
     border-radius: 50px;
     margin: 43px 0 0 151px;
+}
+
+.card .cancel {
+    text-decoration: none;
+    font-size: 10px;
+    margin-left: 41%;
+    letter-spacing: 5px;
+    color: #28c3c0;
 }
