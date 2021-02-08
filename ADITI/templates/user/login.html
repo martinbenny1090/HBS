@@ -1,0 +1,31 @@
+{% extends 'user/base.html'%}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+<div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <h1 class="card-title text-center title">LOGIN</h1>
+                <div class="card-text">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-sm form-control-xs" id="emailInput1" placeholder="Test@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="password" class="form-control form-control-sm form-control-xs" id="passwordInput1" placeholder="********">
+                        </div>
+                        <a href="" style="float: left; ">Forgot Password</a>
+                        <div class="signup" style="float: right;"><a href="#">Not a member yet?</a></div>
+                        <div class="submit"><button type="submit" class="btn btn-primary btn-block login">Sign In</button></div>
+                        <hr>
+
+                        <a href="" class="sp">Create a new account</a>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
