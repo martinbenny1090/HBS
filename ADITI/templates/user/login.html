@@ -1,4 +1,9 @@
 {% extends 'user/base.html'%}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
 
 {% block title %} ADITI || USER-LOGIN {% endblock %}
 
@@ -17,11 +22,9 @@
                             <input type="password" class="form-control form-control-sm form-control-xs" id="passwordInput1" placeholder="********">
                         </div>
                         <a href="" style="float: left; ">Forgot Password</a>
-                        <div class="signup" style="float: right;"><a href="#">Not a member yet?</a></div>
+                        <div class="signup" style="float: right;"><a href="{% url 'register' %}">Not a member yet?</a></div>
                         <div class="submit"><button type="submit" class="btn btn-primary btn-block login">Sign In</button></div>
-                        <hr>
-
-                        <a href="" class="sp">Create a new account</a>
+                        
                         
                     </form>
                 </div>
