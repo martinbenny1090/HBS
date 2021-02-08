@@ -1,4 +1,5 @@
 {% load static %}
+<!-- To load static files -->
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -10,17 +11,23 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <title>{% block title %} {% endblock %}</title>
+    <!-- This tage is used for giving titles to each page -->
     {% block extra_head %}  {% endblock %}
+    <!-- This tage is used for adding stylesheet for coustom pages -->
     {% block css %}  {% endblock %}
+    <!-- this thage is used for typing css within page -->
 </head>
 <body>
     {% block body %} {% endblock %}
+    <!-- This tage for extend body , adding nav bars...etc  -->
     
     {% block content %} {% endblock %}
-
-    {% block footer %}{% endblock %}
+    <!-- This tage for writing content  -->
+    {% block footer %}{% endblock %} 
+    <!-- This tage for writing footer  -->
 
     {% block js %} {% endblock %}
+    <!-- This tage for writing js  -->
 
 </body>
 </html>
