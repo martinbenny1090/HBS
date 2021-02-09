@@ -1,6 +1,105 @@
 {% extends 'user/base.html'%}
-{% block title %} ADITI || Hotel {% endblock %}
+{% load static %}
+{% block title %}ADITHI || HOME{% endblock %}
+
+{% block extra_head %}
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 
 {% block content %}
-<h2>User home page</h2>
+<header class="homeHeader">
+    <div class="home"><i class="fas fa-home    "></i></div>
+</header>
+<body>
+    <div class="search">
+        <div class="input-group">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control searchComp" placeholder="Search" />
+            </div>
+            <button type="button" class="btn searchComp">
+                <i class="fa fa-qrcode" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div class="coreSection row">
+        <div class="col-sm-6 col-lg-8">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary comn spcl"><a href="{% url 'explore' %}">EXPLORE</a></button>
+                <button type="button" class="btn btn-primary comn"><a href="{% url 'home' %}"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <br> ADITHI</a></button>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 btns">
+            <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled msg" tabindex="-1" role="button"
+                    aria-disabled="true"><i class="fa fa-comment" aria-hidden="true"></i> <br> MESSAGE </a></div>
+            <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button"
+                    aria-disabled="true"><i class="fa fa-user-circle" aria-hidden="true"></i> <br> PROFILE </a></div>
+            <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button"
+                    aria-disabled="true"><i class="fa fa-user-o" aria-hidden="true"></i> <br> I'M A HOST </a></div>
+        </div>
+    </div>
+
+   <div class="row details">
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im1" src="{% static '/image/hotel.jpg'  %}" alt="">
+           <button type="submit" class="txt b1">HOTEL</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im2" src="{% static '/image/resort.jpg'  %}" alt="">
+           <button type="submit" class="txt b2">RESORT</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im3" src="{% static '/image/homeStay.jpg'  %}" alt="">
+           <button type="submit" class="txt b3">HOME STAY</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im4" src="{% static '/image/unqSty.jpg'  %}" alt="">
+           <button type="submit" class="txt b4">UNIQUE STAY</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im5" src="{% static '/image/dormt.jpg'  %}" alt="">
+           <button type="submit" class="txt b5">DORMET</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im6" src="{% static '/image/frmhse.jpg'  %}" alt="">
+           <button type="submit" class="txt b6">FARM HOUSE</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im7" src="{% static '/image/rntl.jpg'  %}" alt="">
+           <button type="submit" class="txt b7">RENTALROOMS</button>
+       </div>
+   </div>
+<hr>
+   <div class="row features">
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im1" src="{% static '/image/SiteSeeing.jpg'  %}" alt="">
+           <button type="submit" class="txt b1">SITE SEEING</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im2" src="{% static '/image/CustomPhotos.jpg'  %}" alt="">
+           <button type="submit" class="txt b2">CUSTOM PHOTOS</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im3" src="{% static '/image/SuperAditi.jpg'  %}" alt="">
+           <button type="submit" class="txt b3">SUPER ADITHI</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im4" src="{% static '/image/SocialMedia.jpg'  %}" alt="">
+           <button type="submit" class="txt b4">SOCIAL MEDIA</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im5" src="{% static '/image/BuildYourHome.jpg'  %}" alt="">
+           <button type="submit" class="txt b5">BUILD YOUR HOME</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im6" src="{% static '/image/Tutorials.jpg'  %}" alt="">
+           <button type="submit" class="txt b6">TUTORIALS</button>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-3">
+           <img class="img-thumbnail im7" src="{% static '/image/AskAditi.jpg'  %}" alt="">
+           <button type="submit" class="txt b7">ASK ADITHI</button>
+       </div>
+   </div>
 {% endblock %}

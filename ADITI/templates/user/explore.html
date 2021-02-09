@@ -1,6 +1,33 @@
 {% extends 'user/base.html'%}
-{% block title %} ADITI || Hotel {% endblock %}
+{% block title %} ADITI || EXPLORE {% endblock %}
+
+{% block css %} 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .imap {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    iframe {
+        margin-top: -50px;
+    }
+
+    *.map {
+        height: calc(100vh - 95px) !important;
+        width: 100% !important;
+    }
+</style>
+</head>
+{% endblock %}
+
 
 {% block content %}
-<h2>Explore page with map </h2>
+<section class="imap"><iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1fCNtnGuh8RPlHiBmhXU26Or8FufY9uy6" width="640"
+    height="480"></iframe></section>
 {% endblock %}

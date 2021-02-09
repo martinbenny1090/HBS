@@ -1,0 +1,542 @@
+html,
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background: url(userHOme.jpg) center;
+    overflow-x: hidden;
+}
+
+.uhHeader {
+    background-color: #1ee6dc;
+    height: 10%;
+    padding: 10px;
+}
+
+
+
+.auth {
+    color: white;
+    font-size: 20px;
+}
+
+.auth a {
+    color: white;
+    font-size: 16px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+.hero__container {
+    position: absolute;
+    /* position: relative; */
+    top: 5%;
+    margin: 9px;
+    width: 99%;
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #000000;
+    z-index: 1;
+}
+
+.hero__container .hero__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width : 320px) and (max-width :768px) {
+
+    .hero__container {
+        position:static;
+    }
+
+    .hero__container .hero__content {
+        display: block;
+        z-index: 9999;
+    }
+}
+
+.hero__container .hero__content .srch .srh {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: purple !important;
+}
+
+.homeAd {
+    height: auto;
+    padding: 104px 0 0 0;
+    background: #ffffff;
+}
+
+.homeAd .homeAd__content {
+    display: flex;
+    height: 100%;
+}
+
+.homeAd .homeAd__content .display__tiles .row {
+    padding: 8px 8px 0 8px;
+    flex-wrap: nowrap;
+    width: 38%;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body {
+    z-index: 0;
+    
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .mainTxt {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 8px 0 0 12px;
+}
+.homeAd .homeAd__content .display__tiles .row .dt-body .mainTxt h2 {
+    font-weight: bold;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .secTil h2 {
+    /* display: flex; */
+    font-size: 14px;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .sb-secTil h6 {
+    /* display: flex; */
+    font-size: 10px;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .subTxt {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: 14px 0 0 12px;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .subTxt h6 {
+    font-weight: bold;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .st {
+    margin: 14px 0 0 0;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .st .ste {
+    font-size: 10px;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .exp{
+    margin: 14px 0 0 12px;
+    
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-body .explr {
+    border: none;
+    outline: none;
+    background: #d82845;
+    color: #ffffff;
+}
+
+.homeAd .homeAd__content .display__tiles .row .dt-img {
+    z-index: 11;
+}
+
+.homeAd .homeAd__content .display__tiles .row img {
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 25% 100%, 0 53%);
+}
+
+.homeAd .homeAd__content .offer__tile .row {
+    background: #094268;
+    height: 100%;
+    padding: 8px 8px 0 8px;
+}
+
+.highlight {
+    color: #d82845;
+}
+
+.contentHead {
+    margin: 2%;
+}
+
+.cityHead {
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.cityHead h1 {
+    font-weight: 900;
+}
+
+#gallery img {
+    height: 75vw;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    #gallery img {
+        height: 35vw;
+    }
+}
+
+@media (min-width: 992px) {
+    #gallery img {
+        height: 18vw;
+    }
+}
+
+.carousel-item img {
+    height: 60vw;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
+* {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#gallery.custom {
+    padding: 0 15px;
+}
+
+#gallery.custom img {
+    display: block;
+    margin: 15px 0;
+    border-radius: 300px 30px 300px 300px;
+}
+
+#gallery.custom img:hover {
+    border-radius: 30px 90px 30px 30px;
+}
+
+#exampleModal.custom .modal-content {
+    background: none;
+    border: none;
+}
+
+#exampleModal.custom .modal-header {
+    border: none;
+}
+
+#exampleModal.custom .modal-header button {
+    background: none;
+    border-radius: 100px 100px 0 0;
+    padding: 5px 10px;
+    opacity: 1;
+    position: relative;
+    top: 3px;
+    border: solid 2px white;
+}
+
+@media (min-width: 992px) {
+    #exampleModal.custom .modal-header button {
+        top: 15px;
+    }
+}
+
+#exampleModal.custom .modal-header button:hover {
+    top: 3px;
+}
+
+#exampleModal.custom .modal-header span {
+    color: white;
+}
+
+#exampleModal.custom .modal-body {
+    padding: 0;
+    border: none;
+    position: relative;
+}
+
+#exampleModal.custom .modal-body::before,
+#exampleModal.custom .modal-body::after {
+    content: '';
+    height: 50px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    background: white;
+    border-radius: 3px 10px;
+}
+
+@media (min-width: 768px) {
+
+    #exampleModal.custom .modal-body::before,
+    #exampleModal.custom .modal-body::after {
+        border-radius: 3px 30px;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+#exampleModal.custom .modal-body::before {
+    top: -5px;
+    left: -5px;
+}
+
+@media (min-width: 768px) {
+    #exampleModal.custom .modal-body::before {
+        top: -15px;
+        left: -15px;
+    }
+}
+
+#exampleModal.custom .modal-body::after {
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+}
+
+@media (min-width: 768px) {
+    #exampleModal.custom .modal-body::after {
+        bottom: -15px;
+        right: -15px;
+    }
+}
+
+#exampleModal.custom .modal-footer {
+    border: none;
+    margin-top: 60px;
+}
+
+@media (min-width: 992px) {
+    #exampleModal.custom .modal-footer {
+        margin-top: 40px;
+    }
+}
+
+#exampleModal.custom .modal-footer .btn {
+    margin: auto;
+    border: solid 2px white;
+    background: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    padding: 0.2em 0.7em;
+}
+
+#exampleModal.custom .modal-footer .btn:hover {
+    background: white;
+    color: black;
+}
+
+#exampleModal.custom .carousel-control-prev,
+#exampleModal.custom .carousel-control-next {
+    font-size: 2em;
+    top: auto;
+    opacity: 1;
+    bottom: -52px;
+}
+
+@media (min-width: 768px) {
+
+    #exampleModal.custom .carousel-control-prev,
+    #exampleModal.custom .carousel-control-next {
+        top: 0;
+        opacity: 0.5;
+        bottom: 0;
+    }
+}
+
+#exampleModal.custom .carousel-control-next-icon,
+#exampleModal.custom .carousel-control-prev-icon {
+    height: 30px;
+    width: 30px;
+}
+
+@media (min-width: 768px) {
+    #exampleModal.custom .carousel-control-prev {
+        left: -90px;
+    }
+}
+
+@media (min-width: 768px) {
+    #exampleModal.custom .carousel-control-next {
+        right: -90px;
+    }
+}
+
+#exampleModal.custom .carousel-indicators {
+    bottom: -60px;
+}
+
+@media (min-width: 992px) {
+    #exampleModal.custom .carousel-indicators {
+        bottom: -30px;
+    }
+}
+
+#exampleModal.custom .carousel-indicators li {
+    height: 30px;
+    border-radius: 100px;
+    background: none;
+    border: solid 2px white;
+}
+
+@media (min-width: 992px) {
+    #exampleModal.custom .carousel-indicators li {
+        height: 10px;
+    }
+}
+
+#exampleModal.custom .carousel-indicators li:hover {
+    background: white;
+}
+
+#exampleModal.custom .carousel-indicators li.active {
+    background: white;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+@media (min-width: 576px) {
+    .switch {
+        margin: 0;
+    }
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    -webkit-box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-wrap {
+    text-align: center;
+    background-color: #b1fbc1;
+    padding: 30px;
+    border-radius: 3px;
+    margin: 30px 0 0;
+}
+
+@media (min-width: 576px) {
+    .switch-wrap {
+        position: fixed;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+
+.switch-text {
+    display: block;
+    margin: 0.5em;
+}
+
+@media (min-width: 576px) {
+    .switch-text {
+        margin: 0 1em 0 0;
+    }
+}
+
+.glry {
+    align-items: center;
+    justify-content: center;
+    background: #ffffff70;
+}
+
+.glry .im-ct {
+    padding: 30px 15px 30px 15px;
+}
+
+.glry .im-ct h2 {
+    background: #ffff;
+    margin: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.prprty {
+    align-items: center;
+    justify-content: center;
+    background: #ffffff70;
+}
+
+.prprty .im-ct {
+    padding: 30px;
+}
+
+.prprty .im-ct h2 {
+    background: #ffff;
+    margin: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
