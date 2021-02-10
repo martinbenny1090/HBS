@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.navigation {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #05da93;
+    transition: .5s;
+    overflow:hidden;
+}
+
+.navigation.active {
+    width: 300px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 142px 0 0 0;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #072edb;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #05da93;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.toggle.active {
+    left: 240px;
+    transition: .5s;
+}
+
+.toggle:hover {
+    background: #072edb;
+}
+
+.toggle::before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.toggle.active::before {
+    content: '\f00d ';
+}
+
+@media (max-width: 767px) {
+    .navigation {
+        left: -60px;
+    }
+
+    .navigation:hover {
+        left: 0px;
+    }
+}
+
+.b_mngmnt {
+    margin: 0 0 0 20%;
+    padding: 7%;
+}
+
+.r_mngmnt {
+    margin: 0 0 0 20%;
+    padding: 7%;
+}
+
+.h_list {
+    margin: 0 0 0 20%;
+    padding: 7%;
+}
+
+.payment {
+    margin: 0 0 0 20%;
+    padding: 7%; 
+}
+
+.payout {
+    margin: 0 0 0 20%;
+    padding: 7%; 
+}

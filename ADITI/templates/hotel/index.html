@@ -1,10 +1,270 @@
 {% extends 'user/base.html'%}
-{% block title %} ADITI {% endblock %}
+{% load static %}
+{% block title %} ADITI || HOTEL - HOME {% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'css/hotel.css' %}">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/hotel.js' %}"></script>
+{% endblock %}
+
 
 {% block content %}
-<h1>Hotel home page
-</h1>
-<p> side bar 
-    htotel viewsing table names 
-</p>
+<div class="navigation">
+    <ul>
+        <li class="bm">
+            <a href="#" >
+                <span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
+                <span class="title">Booking Management</span>
+            </a>
+        </li>
+        <li class="rm">
+            <a href="#" >
+                <span class="icon"><i class="fa fa-list" aria-hidden="true"></i></span>
+                <span class="title">Room Management</span>
+            </a>
+        </li>
+        <li class="rp">
+            <a href="#" >
+                <span class="icon"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+                <span class="title">Report Analysis</span>
+            </a>
+        </li>
+        <li class="hl">
+            <a href="#" >
+                <span class="icon"><i class="fa fa-th-list" aria-hidden="true"></i></span>
+                <span class="title">Hotel List</span>
+            </a>
+        </li>
+        <li class="po">
+            <a href="#" >
+                <span class="icon"><i class="fa fa-sort-amount-asc" aria-hidden="true"></i></span>
+                <span class="title">Payout</span>
+            </a>
+        </li>
+        <li class="pm">
+            <a href="" >
+                <span class="icon"><i class="fa fa-paypal" aria-hidden="true"></i></span>
+                <span class="title">Payment</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="toggle" onclick="toggleMenu()"></div>
+<div class="row b_mngmnt">
+    <div class="col-12 col-sm-6 col-lg-8">
+        <h2>Booking Management</h2>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Person Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Check-In</th>
+            <th scope="col">Check-Out</th>
+            <th scope="col">Room No.</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>BlueSaphire</td>
+            <td>9999999999</td>
+            <td>blusaphire@test.com</td>
+            <td>17-11-2020 12.30PM</td>
+            <td>19-11-2020 10.40 AM</td>
+            <td>13</td>
+            <td style="color: green;">SUCCESS</td>
+            <td style="color: green;">Booked</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>BlueSaphire</td>
+            <td>9999999999</td>
+            <td>blusaphire@test.com</td>
+            <td>17-11-2020 12.30PM</td>
+            <td>19-11-2020 10.40 AM</td>
+            <td>13</td>
+            <td style="color: green;">SUCCESS</td>
+            <td style="color: green;">Booked</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>BlueSaphire</td>
+            <td>9999999999</td>
+            <td>blusaphire@test.com</td>
+            <td>17-11-2020 12.30PM</td>
+            <td>19-11-2020 10.40 AM</td>
+            <td>13</td>
+            <td style="color: green;">SUCCESS</td>
+            <td style="color: green;">Booked</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="row r_mngmnt">
+    <div class="col-12 col-sm-6 col-lg-8">
+        <h2>Room Management</h2>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Room Number</th>
+            <th scope="col">Room Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>13</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>13</td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>13</td>
+            <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="row h_list">
+    <div class="col-12 col-sm-6 col-lg-8">
+        <h2>Hotel List</h2>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Hotel Name</th>
+            <th scope="col">Hotel Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="row payout">
+    <div class="col-12 col-sm-6 col-lg-8">
+        <h2>Payout</h2>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Hotel</th>
+            <th scope="col">No. of Payment</th>
+            <th scope="col">Total Payment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="row payment">
+    <div class="col-12 col-sm-6 col-lg-8">
+        <h2>Payment</h2>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Hotel</th>
+            <th scope="col">Payment Mode</th>
+            <th scope="col">Payment Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
 {% endblock %}
