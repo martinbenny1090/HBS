@@ -5,12 +5,14 @@
 {% block extra_head %}
 
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+
 {% endblock %}
 
 
 {% block content %}
-<header class="homeHeader">
-    <div class="home"><i class="fas fa-home    "></i></div>
+<header class="homeHeader home a .logo">
+    <div class="home"><a href="#"><img src="{% static 'image/AL.png' %}" class="logo"></a></div>
 </header>
 <body>
     <div class="search">
@@ -26,17 +28,17 @@
     <div class="coreSection row">
         <div class="col-sm-6 col-lg-8">
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary comn spcl"><a href="{% url 'explore' %}">EXPLORE</a></button>
-                <button type="button" class="btn btn-primary comn"><a href="{% url 'home' %}"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                <button type="button" class="btn btn-primary comn spcl"><a href="{% url 'hotel_list' %}">EXPLORE</a></button>
+                <button type="button" class="btn btn-primary comn"><a href="{% url 'explore' %}"><i class="fa fa-map-marker" aria-hidden="true"></i>
                     <br> ADITHI</a></button>
             </div>
         </div>
         <div class="col-sm-6 col-lg-4 btns">
             <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled msg" tabindex="-1" role="button"
                     aria-disabled="true"><i class="fa fa-comment" aria-hidden="true"></i> <br> MESSAGE </a></div>
-            <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button"
+            <div class="action"><a href="{% url 'profile' %}" class="btn btn-secondary btn-lg" tabindex="-1" role="button"
                     aria-disabled="true"><i class="fa fa-user-circle" aria-hidden="true"></i> <br> PROFILE </a></div>
-            <div class="action"><a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button"
+            <div class="action"><a href="{% url 'hotelapp:hlogin' %}" class="btn btn-secondary btn-lg " tabindex="-1" role="button"
                     aria-disabled="true"><i class="fa fa-user-o" aria-hidden="true"></i> <br> I'M A HOST </a></div>
         </div>
     </div>
@@ -102,4 +104,130 @@
            <button type="submit" class="txt b7">ASK ADITHI</button>
        </div>
    </div>
+   <div class="container-fluid homeAd">
+    <div class="row homeAd__content">
+
+        <div class="col-sm display__tiles">
+            <div class="row">
+                <div class="col-sm dt-body">
+                    <div class="mainTxt">
+                        <h2 class="highlight">
+                            PREMIUM
+                        </h2>
+                        <h2>HOTELS</h2>
+                    </div>
+                    <div class="subTxt">
+                        <h6>TAILOR-MADE <br>FOR YOU</h6>
+                    </div>
+                    <div class="exp">
+                        <button type="submit" class="explr">EXPLORE NOW</button>
+                    </div>
+                </div>
+                <div class="col-sm dt-img">
+                    <img src="{% static '/image/tile1.jpg'  %}" alt="" style="width: 320px; height: 200px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm display__tiles">
+            <div class="row">
+                <div class="col-sm dt-body">
+                    <div class="mainTxt secTil" >
+                        <h2>ROOMS FOR</h2>            
+                        <h2 class="highlight">TWO</h2>                
+                    </div>
+                    <div class="subTxt sb-secTil">
+                        <h6>SPEND GREAT <br>TIME TOGETHER</h6>
+                    </div>
+                    <div class="exp st">
+                        <button type="submit" class="explr ste">EXPLORE NOW</button>
+                    </div>
+                </div>
+                <div class="col-sm dt-img">
+                    <img src="{% static '/image/tile2.jpg'  %}" alt="" style="width: 320px; height: 200px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm offer__tile">
+            <div class="row">
+                <div class="col offerPer">
+                    <h1>80%</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contentHead">
+    <div class="card cityHead container">
+        <div class="card-body">
+            <h1>POPULAR CITIES IN MALDIVES</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row glry" id="gallery" data-toggle="modal" data-target="#exampleModal">
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>BAA TOLL</h2>
+        <img class="w-100"
+            src="{% static '/image/BAATOLL.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="0">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>DHIGURAH</h2>
+        <img class="w-100"
+            src="{% static '/image/dhigurah.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="1">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>THULISDHOO</h2>
+        <img class="w-100"
+            src="{% static '/image/thuldhoo.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    
+</div>
+
+<div class="contentHead">
+    <div class="card cityHead container">
+        <div class="card-body">
+            <h1>BROWSE BY PROPERTY TYPE</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row prprty" id="gallery" data-toggle="modal" data-target="#exampleModal">
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HOTELS</h2>
+        <img class="w-100"
+            src="{% static '/image/Hotels.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="0">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HOME STAY</h2>
+        <img class="w-100"
+            src="{% static '/image/homeStay.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="1">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>RENTAL HOMES</h2>
+        <img class="w-100"
+            src="{% static '/image/rental_homes.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>CANOPIES</h2>
+        <img class="w-100"
+            src="{% static '/image/canopies.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HUTS</h2>
+        <img class="w-100"
+            src="{% static '/image/huts.jpg'  %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    
+</div>
+
+</body>
 {% endblock %}

@@ -15,8 +15,10 @@ urlpatterns = [
 
     path('home/', views.home, name='home'),#user search page
     path('explore/', views.explore, name='explore'),
-    path('hotel/', views.hotelHome, name='hotel/'),
-
+    path('profile/', views.profile, name='profile'),
+    path('hotel_list/', views.hotel_list, name='hotel_list'),
+    path('hotel_detail/', views.hotel_detail, name='hotel_detail'),
+    path('user_detail/', views.user_detail, name='user_detail'),
 
 
     

@@ -1,0 +1,14 @@
+.rno,
+.feat,
+.prc,
+.tx,
+.rim,
+.fim,
+.rt,
+.desc {
+    border-radius: 10px;
+}
+
+.desc {
+    height: 40%;
+}

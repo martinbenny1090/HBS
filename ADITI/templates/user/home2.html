@@ -1,0 +1,478 @@
+{% extends 'user/base.html'%}
+{% load static %}
+
+{% block extra_head %}
+
+<link rel="stylesheet" href="{% static 'css/homeII.css' %}">
+<script src="{% static 'js/home.js' %}"></script>
+
+{% endblock %}
+
+
+{% block title %} ADITI || USER-HOME {% endblock %}
+
+{% block content %}
+
+<header class="uhHeader">
+    <div class="superBtn" style="float: left;"><i class="fas fa-bars "></i></div>
+    <div class="auth" style="float: right;"><i class="fas fa-sign-out-alt    "></i><a href="{% url 'logout' %}">LogOut</a></div>
+</header>
+
+<body>
+    <!-- HERO BAR -->
+    <div class="card hero__container">
+        <div class="card-body hero__content">
+            <div class="loc">
+                <label for="location">Location :</label>
+                <select id="loc" class="form-control">
+                    <option selected>Choose Location</option>
+                    <option value="">Addu City</option>
+                    <option value="">Dhidhdhoo</option>
+                    <option value="">Kulhudhuffushi</option>
+                    <option value="">Eydhafushi</option>
+                    <option value="">Farukolhufunadhoo</option>
+                    <option value="">Felidhoo</option>
+                    <option value="">Funadhoo</option>
+                    <option value="">Fuvahmulah</option>
+                    <option value="">Gan</option>
+                    <option value="">Hinnavaru</option>
+                    <option value="">Hithadhoo</option>
+                    <option value="">Hulhumalé</option>
+                    <option value="">Hulhumeedhoo</option>
+                    <option value="">Kudahuvadhoo</option>
+                    <option value="">Magoodhoo</option>
+                    <option value="">Mahibadhoo</option>
+                    <option value="">Malé</option>
+                    <option value="">Manadhoo</option>
+                    <option value="">Maroshi</option>
+                    <option value="">Meedhoo</option>
+                    <option value="">Mula</option>
+                    <option value="">Naifaru</option>
+                    <option value="">Nolhivaranfaru</option>
+                    <option value="">Thinadhoo</option>
+                    <option value="">Ungoofaaru</option>
+                    <option value="">Veymandhoo</option>
+                    <option value="">Veymandoo</option>
+                    <option value="">Viligili</option>
+                </select>
+            </div>
+            <div class="chkIn">
+                <label for="checkIn">Check-In</label>
+                <input type="date" id="checkIn" class="form-control">
+            </div>
+            <div class="chkOut">
+                <label for="checkOut">Check-Out</label>
+                <input type="date" id="checkOut" class="form-control">
+            </div>
+            <div class="rooms">
+                <label for="rooms">Rooms</label>
+                <select id="rooms" class="form-control">
+                    <option selected>Rooms</option>
+                    <option value="">Single</options>
+                    <option value="">Double</options>
+                    <option value="">Triple</options>
+                    <option value="">Quad</options>
+                    <option value="">Queen</options>
+                    <option value="">King</options>
+                    <option value="">Twin</options>
+                    <option value="">Double-double</options>
+                    <option value="">Studio</options>
+                </select>
+            </div>
+            <div class="adults">
+                <label for="adults">Adults</label>
+                <select id="adlts" class="form-control">
+                    <option selected>Adults</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                </select>
+            </div>
+            <div class="children">
+                <label for="chld">Children</label>
+                <select id="chld" class="form-control">
+                    <option selected>Children</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">More than 5</option>
+                </select>
+            </div>
+            <div class="srch">
+                <button type="submit" class="btn btn-primary src">SEARCH</button>
+            </div>
+        </div>
+    </div>
+    <!-- Main  Section -->
+    <div class="row container-fluid main__section">
+        <div class="col-sm-4 col-lg-2 filter-section">
+            <h2 class="mainHead">Filters</h2>
+            Popular locations in Maldives
+            <select id="loc" class="form-control loc">
+                <option selected>Choose Location</option>
+                <option value="">Addu City</option>
+                <option value="">Dhidhdhoo</option>
+                <option value="">Kulhudhuffushi</option>
+                <option value="">Eydhafushi</option>
+                <option value="">Farukolhufunadhoo</option>
+                <option value="">Felidhoo</option>
+                <option value="">Funadhoo</option>
+                <option value="">Fuvahmulah</option>
+                <option value="">Gan</option>
+                <option value="">Hinnavaru</option>
+                <option value="">Hithadhoo</option>
+                <option value="">Hulhumalé</option>
+                <option value="">Hulhumeedhoo</option>
+                <option value="">Kudahuvadhoo</option>
+                <option value="">Magoodhoo</option>
+                <option value="">Mahibadhoo</option>
+                <option value="">Malé</option>
+                <option value="">Manadhoo</option>
+                <option value="">Maroshi</option>
+                <option value="">Meedhoo</option>
+                <option value="">Mula</option>
+                <option value="">Naifaru</option>
+                <option value="">Nolhivaranfaru</option>
+                <option value="">Thinadhoo</option>
+                <option value="">Ungoofaaru</option>
+                <option value="">Veymandhoo</option>
+                <option value="">Veymandoo</option>
+                <option value="">Viligili</option>
+            </select>
+            <sub class="plTitle">DHIGURAH THULUSDHOO BAA TOLL</sub>
+            <div class="xp">+See More</div>
+            <hr>
+            <label for="customRange2">Price</label>
+            <input type="range" class="custom-range" min="900" max="10000" id="customRange2" step="100">
+            
+        </div>
+        <div class="col-sm-6 col-lg-10 detail-section">
+            <div class="row notify">
+                <div class="col-sm-6 left" style="float: left;"><p>307 Adhithi Rooms in Eranakulam</p></div>
+                <div class="col-sm-6 right" style="float: right;"><p>Sort by popularity <i class="fa fa-caret-down" aria-hidden="true"></i></p></div>
+            </div>
+            <hr>
+            <div class="row ftr">
+                <div class="col-sm-3 col-lg-4 vveSec">
+                    <div class="row imc">
+                        <div class="col-sm-4 col-lg-8 f">
+                            <div class="m-Im">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-lg-2 s">
+                            <div class="s-im1">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im2">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im3">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-lg-8 dtlSec">
+                    <h2 class="Hdng">Marriot Hotel</h2>
+                    <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                    <div class="notice row">
+                        <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                        <sub class="s-sb">(717 Ratings)     Good</sub>
+                        
+                    </div>
+                    <div class="notice2 row">
+                        <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                        <div><i class="fas fa-parking    "></i>Parking</div>
+                        <div><i class="fas fa-water    "></i>Hot Water</div>
+                        <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                    </div>
+                    <div class="highlightSec row">
+                        <div>Sanitized Stay</div>
+                    </div>
+                    <div class="row offer">
+                        <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                        <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                        <div class="dsc">39% off</div>
+                    </div>
+                    <div class="row btns">
+                        <div><button type="button" class="vd">View Details</button></div>
+                        <div><a href="{% url 'hotel_detail' %}"><button type="button" class="bn">Book Now</button></a></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row ftr">
+                <div class="col-sm-3 col-lg-4 vveSec">
+                    <div class="row imc">
+                        <div class="col-sm-4 col-lg-8 f">
+                            <div class="m-Im">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-lg-2 s">
+                            <div class="s-im1">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im2">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im3">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-lg-8 dtlSec">
+                    <h2 class="Hdng">Marriot Hotel</h2>
+                    <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                    <div class="notice row">
+                        <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                        <sub class="s-sb">(717 Ratings)     Good</sub>
+                        
+                    </div>
+                    <div class="notice2 row">
+                        <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                        <div><i class="fas fa-parking    "></i>Parking</div>
+                        <div><i class="fas fa-water    "></i>Hot Water</div>
+                        <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                    </div>
+                    <div class="highlightSec row">
+                        <div>Sanitized Stay</div>
+                    </div>
+                    <div class="row offer">
+                        <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                        <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                        <div class="dsc">39% off</div>
+                    </div>
+                    <div class="row btns">
+                        <div><button type="button" class="vd">View Details</button></div>
+                        <div><a href="{% url 'hotel_detail' %}"><button type="button" class="bn">Book Now</button></a></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row ftr">
+                <div class="col-sm-3 col-lg-4 vveSec">
+                    <div class="row imc">
+                        <div class="col-sm-4 col-lg-8 f">
+                            <div class="m-Im">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-lg-2 s">
+                            <div class="s-im1">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im2">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                            <div class="s-im3">
+                                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-lg-8 dtlSec">
+                    <h2 class="Hdng">Marriot Hotel</h2>
+                    <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                    <div class="notice row">
+                        <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                        <sub class="s-sb">(717 Ratings)     Good</sub>
+                        
+                    </div>
+                    <div class="notice2 row">
+                        <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                        <div><i class="fas fa-parking    "></i>Parking</div>
+                        <div><i class="fas fa-water    "></i>Hot Water</div>
+                        <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                    </div>
+                    <div class="highlightSec row">
+                        <div>Sanitized Stay</div>
+                    </div>
+                    <div class="row offer">
+                        <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                        <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                        <div class="dsc">39% off</div>
+                    </div>
+                    <div class="row btns">
+                        <div><button type="button" class="vd">View Details</button></div>
+                        <div><a href="{% url 'hotel_detail' %}"><button type="button" class="bn">Book Now</button></a></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="col container smScreen">
+        <div class="col smFilter">
+            <h2>FILTER</h2>
+            Popular locations in Maldives
+            <select id="loc" class="form-control smloc">
+                <option selected>Choose Location</option>
+                <option value="">Addu City</option>
+                <option value="">Dhidhdhoo</option>
+                <option value="">Kulhudhuffushi</option>
+                <option value="">Eydhafushi</option>
+                <option value="">Farukolhufunadhoo</option>
+                <option value="">Felidhoo</option>
+                <option value="">Funadhoo</option>
+                <option value="">Fuvahmulah</option>
+                <option value="">Gan</option>
+                <option value="">Hinnavaru</option>
+                <option value="">Hithadhoo</option>
+                <option value="">Hulhumalé</option>
+                <option value="">Hulhumeedhoo</option>
+                <option value="">Kudahuvadhoo</option>
+                <option value="">Magoodhoo</option>
+                <option value="">Mahibadhoo</option>
+                <option value="">Malé</option>
+                <option value="">Manadhoo</option>
+                <option value="">Maroshi</option>
+                <option value="">Meedhoo</option>
+                <option value="">Mula</option>
+                <option value="">Naifaru</option>
+                <option value="">Nolhivaranfaru</option>
+                <option value="">Thinadhoo</option>
+                <option value="">Ungoofaaru</option>
+                <option value="">Veymandhoo</option>
+                <option value="">Veymandoo</option>
+                <option value="">Viligili</option>
+            </select>
+            <sub class="sm_plTitle">DHIGURAH &nbsp;&nbsp; THULUSDHOO &nbsp;&nbsp; BAA TOLL</sub>
+            <div class="sm_xp">+See More</div>
+            <div class="smRange">
+                <label for="customRange2">Price</label>
+                <input type="range" class="custom-range" min="900" max="10000" id="customRange2" step="100">
+            </div>
+        </div>
+        <div class="col smDtlSec">
+            <div class="col-sm smIm">
+                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                <div class="dwBtn1"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+            <script>
+                $(".dwBtn1").click(function () {
+                    $(".sm_dtls1").toggle();
+                });
+            </script>
+            <div class="col-sm-9 col-lg-8 sm_dtls1">
+                <h2 class="Hdng">Marriot Hotel</h2>
+                <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                <div class="notice row">
+                    <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                    <sub class="s-sb">(717 Ratings) Good</sub>
+
+                </div>
+                <div class="notice2 row">
+                    <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                    <div><i class="fas fa-parking    "></i>Parking</div>
+                    <div><i class="fas fa-water    "></i>Hot Water</div>
+                    <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                </div>
+                <div class="highlightSec row">
+                    <div>Sanitized Stay</div>
+                </div>
+                <div class="row offer">
+                    <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                    <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                    <div class="dsc">39% off</div>
+                </div>
+                <div class="row btns">
+                    <div><button type="button" class="vd">View Details</button></div>
+                    <div><button type="button" class="bn">Book Now</button></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col smDtlSec">
+            <div class="col-sm smIm">
+                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                <div class="dwBtn2"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+            <script>
+                $(".dwBtn2").click(function () {
+                    $(".sm_dtls2").toggle();
+                });
+            </script>
+            <div class="col-sm-9 col-lg-8 sm_dtls2">
+                <h2 class="Hdng">Marriot Hotel</h2>
+                <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                <div class="notice row">
+                    <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                    <sub class="s-sb">(717 Ratings) Good</sub>
+
+                </div>
+                <div class="notice2 row">
+                    <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                    <div><i class="fas fa-parking    "></i>Parking</div>
+                    <div><i class="fas fa-water    "></i>Hot Water</div>
+                    <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                </div>
+                <div class="highlightSec row">
+                    <div>Sanitized Stay</div>
+                </div>
+                <div class="row offer">
+                    <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                    <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                    <div class="dsc">39% off</div>
+                </div>
+                <div class="row btns">
+                    <div><button type="button" class="vd">View Details</button></div>
+                    <div><button type="button" class="bn">Book Now</button></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col smDtlSec">
+            <div class="col-sm smIm">
+                <img src="{% static 'image/roomFeat.jpg' %}" alt="">
+                <div class="dwBtn3"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            </div>
+            <script>
+                $(".dwBtn3").click(function () {
+                    $(".sm_dtls3").toggle();
+                });
+            </script>
+            <div class="col-sm-9 col-lg-8 sm_dtls3">
+                <h2 class="Hdng">Marriot Hotel</h2>
+                <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+                <div class="notice row">
+                    <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                    <sub class="s-sb">(717 Ratings) Good</sub>
+
+                </div>
+                <div class="notice2 row">
+                    <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                    <div><i class="fas fa-parking    "></i>Parking</div>
+                    <div><i class="fas fa-water    "></i>Hot Water</div>
+                    <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+                </div>
+                <div class="highlightSec row">
+                    <div>Sanitized Stay</div>
+                </div>
+                <div class="row offer">
+                    <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                    <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                    <div class="dsc">39% off</div>
+                </div>
+                <div class="row btns">
+                    <div><button type="button" class="vd">View Details</button></div>
+                    <div><button type="button" class="bn">Book Now</button></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+{% endblock %}

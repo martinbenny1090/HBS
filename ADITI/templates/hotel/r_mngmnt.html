@@ -1,0 +1,107 @@
+{% extends 'hotel/hbase.html'%}
+{% load static %}
+{% block title %} ADITI || HOTEL (Room Management) {% endblock %}
+
+{% block extra_head %} 
+<link rel="stylesheet" href="{% static 'css/subpage.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container holder">
+        <h1>Room Management</h1>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">NO.</th>
+                <th scope="col">Room No.</th>
+                <th scope="col">Room Features</th>
+                <th scope="col"><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                      New
+                  </button></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <!-- Modal -->
+  <form action="{% url 'hotelapp:roomsadd' %}" method="POST" enctype="multipart/form-data">
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+ aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content ">
+         <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalCenterTitle">Room Management</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+             <div class="row Main">
+                 <div class="col leftPart">
+                     <label for="">Room NO.</label>
+                     <input type="text" name="rname" id="" class="form-control rno">
+                     <label for="">Price</label>
+                     <input type="text" name="price" id="" class="form-control prc">
+                     <label for="">TAX</label>
+                     <input type="text" name="tax" id="" class="form-control tx">
+                     <label for="">Room thumbnail</label>
+                     <input type="file" name="image" id="" class="form-control rim">
+                     <label for="">Room Image1</label>
+                     <input type="file" name="image1" id="" class="form-control rim">
+                     
+                     
+                 </div>
+                 <div class="col rightPart">
+                     <label for="">Room Type</label>
+                     <select name="R_type" id="" class="form-control rt"></select>
+                     <label for="">Room Image2</label>
+                     <input type="file" name="" id="" class="form-control rim">
+                     <label for="">Room Image3</label>
+                     <input type="file" name="" id="" class="form-control rim">
+                 </div>
+             </div>
+         </div>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             <button type="button" class="btn btn-primary">Save </button>
+         </div>
+     </div>
+ </div>
+</div>
+</form>
+</body>
+
+{% endblock %}

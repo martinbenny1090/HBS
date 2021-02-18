@@ -1,0 +1,45 @@
+{% extends 'user/base.html'%}
+{% load static %}
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/userDetails.css' %}">
+{% endblock %}
+{% block title %} ADITI || User Details {% endblock %}
+{% block content %}
+
+<body>
+
+    <div class="row roundPic">
+
+        <img src="{% static 'image/avtar.jpg' %}" alt="">
+
+    </div>
+
+    <div class="row p-dtls">
+        <div class="col-sm-6 col-lg-6 leftpart">
+            <div>Name :</div>
+            <div>Sur Name :</div>
+            <div>Gender :</div>
+            <div>D.O.B :</div>
+            <div>Email :</div>
+            <div>Contact No. :</div>
+            <div>AADHAR/ PASSPORT/ GOVT.ID :</div>
+        </div>
+        <div class="col-sm-6 col-lg-6 rightpart">
+            <form action="#">
+                <input type="text" name="" id="" class="form-control nm">
+                <input type="text" name="" id="" class="form-control snm">
+                <input type="text" name="" id="" class="form-control gdr">
+                <input type="text" name="" id="" class="form-control dob">
+                <input type="text" name="" id="" class="form-control eml">
+                <input type="text" name="" id="" class="form-control Cno">
+                <input type="text" name="" id="" class="form-control apg">
+            </form>
+        </div>
+    </div>
+    <div class="row btns">
+        <button type="button" class="btn btn-outline-dark cnc">CANCEL</button>
+        <button type="submit" class="btn btn-dark sv">SAVE</button>
+    </div>
+</body>
+
+{% endblock %}

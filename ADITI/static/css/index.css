@@ -10,6 +10,27 @@ html,body {
     overflow-x: hidden;
 }
 
+.homeHeader {
+    padding: 8px;
+}
+
+.homeHeader .home {
+    background: #ffffff80;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.homeHeader .home .logo {
+    width: 86px;
+    height: 86px;
+    margin: -21px;
+    cursor: pointer;
+}
+
 .search {
     padding: 8px;
 }

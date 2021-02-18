@@ -1,0 +1,121 @@
+{% load static %}
+<!-- To load static files -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/hotel.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>{% block title %} {% endblock %}</title>
+    <!-- This tage is used for giving titles to each page -->
+    {% block extra_head %} {% endblock %}
+    <!-- This tage is used for adding stylesheet for coustom pages -->
+    {% block css %} {% endblock %}
+    <!-- this thage is used for typing css within page -->
+</head>
+
+<body>
+    {% block body %}
+
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>ADITI</h3>
+                    <p>International</p>
+                </div>
+
+
+                <ul class="list-unstyled components">
+
+
+
+                    <li>
+                        <a href="{% url 'hotelapp:b_management' %}">Booking Management</a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'hotelapp:r_management' %}">Room Management</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'hotelapp:analytics' %}">Report Analytics</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'hotelapp:hotel_list' %}">Hotel List</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'hotelapp:Payout' %}">Payout</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'hotelapp:Payment' %}">Payment</a>
+                    </li>
+                </ul>
+
+
+            </nav>
+
+            <div class="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                </nav>
+
+
+
+
+            </div>
+        </div>
+
+
+        {% endblock %}
+        <!-- This tage for extend body , adding nav bars...etc  -->
+
+        {% block content %} {% endblock %}
+        <!-- This tage for writing content  -->
+        {% block footer %}{% endblock %}
+        <!-- This tage for writing footer  -->
+
+        {% block js %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#sidebarCollapse").on('click', function () {
+                    $("#sidebar").toggleClass('active');
+                })
+            })
+        </script>
+        {% endblock %}
+        <!-- This tage for writing js  -->
+
+    </body>
+
+</html>
