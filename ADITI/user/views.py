@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import CustomUser
+from .models import CustomUser, Userdetails
 # Create your views here.
 
 
@@ -73,4 +73,16 @@ def hotel_detail(request):
     return render(request, 'user/bookNow.html')
 
 def user_detail(request):
-    return render(request, 'user/userDetails.html')
+    if request.method=="POST":
+        name = request.POST['name']
+        SurName = request.POST['SurName']
+        gender = request.POST['gender']
+        dob = request.POST['dob']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        image = request.FILES['image']
+        user = Userdetails(name=name, surname=SurName, gender=gender, dob=dob, email=email, PhNumber=phone, Id_Proof=image)
+        user.save()
+        return redirect('user_detail')
+    else:
+        return render(request, 'user/userDetails.html')

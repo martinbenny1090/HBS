@@ -6,7 +6,6 @@
 {% block title %} ADITI || User Details {% endblock %}
 {% block content %}
 
-<body>
 
     <div class="row roundPic">
 
@@ -14,32 +13,39 @@
 
     </div>
 
-    <div class="row p-dtls">
-        <div class="col-sm-6 col-lg-6 leftpart">
-            <div>Name :</div>
-            <div>Sur Name :</div>
-            <div>Gender :</div>
-            <div>D.O.B :</div>
-            <div>Email :</div>
-            <div>Contact No. :</div>
-            <div>AADHAR/ PASSPORT/ GOVT.ID :</div>
-        </div>
-        <div class="col-sm-6 col-lg-6 rightpart">
-            <form action="#">
-                <input type="text" name="" id="" class="form-control nm">
-                <input type="text" name="" id="" class="form-control snm">
-                <input type="text" name="" id="" class="form-control gdr">
-                <input type="text" name="" id="" class="form-control dob">
-                <input type="text" name="" id="" class="form-control eml">
-                <input type="text" name="" id="" class="form-control Cno">
-                <input type="text" name="" id="" class="form-control apg">
-            </form>
+    <div class="global-container">
+        <div class="card signup-form">
+            <div class="card-body">
+                <h1 class="card-title text-center title">CREATE ACCOUNT</h1>
+                <div class="card-text">
+                    <form method="POST" action="{% url 'user_detail' %}" enctype="multipart/form-data" > 
+                        {% csrf_token %}
+                        <div class="form-group name">
+                            <input type="text" name="name" class="form-control form-control-sm form-control-xs in1" id="textInput1" placeholder="Name" required>
+                        </div>
+                        <div class="form-group name">
+                            <input type="text" name="SurName" class="form-control form-control-sm form-control-xs in1" id="textInput1" placeholder="Sur Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="gender" class="form-control form-control-sm form-control-xs" placeholder="Gender" required>                            
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="dob" class="form-control form-control-sm form-control-xs" required>                            
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control form-control-sm form-control-xs" placeholder="Email" required>                            
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control form-control-sm form-control-xs" placeholder="Phone" required>                            
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="image" class="form-control form-control-sm form-control-xs" accept="image/*" required>                            
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block signup">Sign Up</button></div>
+                    </form>
+                </div>
+            </div>
+            
         </div>
     </div>
-    <div class="row btns">
-        <button type="button" class="btn btn-outline-dark cnc">CANCEL</button>
-        <button type="submit" class="btn btn-dark sv">SAVE</button>
-    </div>
-</body>
-
 {% endblock %}

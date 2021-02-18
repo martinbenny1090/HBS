@@ -1,0 +1,61 @@
+html,body {
+    height: 100%;
+     font-family: "Roboto", sans-serif;
+    background: url(loginBG.jpg) center;
+}
+
+.global-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0db8de;
+}
+
+form {
+    padding-top: 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.login-form {
+    width: 380px;
+    height: 450px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid #057969;
+}
+
+.title {
+    color: #057969;
+}
+
+input[type="email"] {
+    border: 1px solid #057969;    
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+input[type="password"] {
+    border: 1px solid #057969;    
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.submit {
+    margin: 83px 0 0 0;
+}
+
+.login {
+    border-radius: 20px;
+    width: 30%;
+    margin: 0 0 0 33%;
+    background-color: #057969;
+    border: none;
+    outline: none;
+}
+
+.sp {
+    margin:26%;
+}
+

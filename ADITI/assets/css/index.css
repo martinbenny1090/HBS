@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+     font-family: "Roboto", sans-serif;
+    background: url(A_home.jpg) center;
+    overflow-x: hidden;
+}
+
+.homeHeader {
+    padding: 8px;
+}
+
+.homeHeader .home {
+    background: #ffffff80;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.homeHeader .home .logo {
+    width: 86px;
+    height: 86px;
+    margin: -21px;
+    cursor: pointer;
+}
+
+.search {
+    padding: 8px;
+}
+
+.search .input-group {
+    justify-content: flex-end;
+    outline: none;
+    color: #ffffff;
+}
+
+.coreSection {
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.coreSection .btn-group {
+    width: 100%;
+    margin: 0 0 0 20%;
+}
+
+.coreSection .btn-group .comn {
+    background: #ffffff80;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.coreSection .btn-group .spcl {
+    width: 34%;
+    border-right: 1px solid black;
+}
+
+.coreSection .btns .action {
+    text-align: end;
+    margin: 0 0 10px 0;
+}
+
+.coreSection .btns .action .msg {
+    border-top-left-radius: 20px;
+}
+
+.coreSection .btns .action a {
+    font-size: 12px;
+    width: 13%;
+    border: 1px solid #ffff;
+}
+
+.details {
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.details .im1, .im2, .im3, .im4 {
+    margin-bottom: 19px;
+}
+
+.details .txt {
+    position: absolute;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 8px;
+    top: 44%;
+    left: 42%;
+    cursor: pointer;
+}
+
+.features {
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 20px 0 0 0 ;
+}
+
+.features img {
+    height: 300px;
+    width: 500px;
+}
+
+.features .txt {
+    position: absolute;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 8px;
+    top: 44%;
+    left: 42%;
+    cursor: pointer;
+}
