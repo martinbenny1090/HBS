@@ -36,9 +36,9 @@ body {
     margin: 0 0 0 62%;
 }
 
-.p-dtls .rightpart form input {
+.p-dtls .rightpart input, select {
     margin: 0 0 8px 0;
-    width: 50%;
+    width: 50% !important;
 }
 
 .btns {
