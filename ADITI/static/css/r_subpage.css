@@ -1,9 +1,12 @@
 .holder {
     padding: 7% 15px 0 15px;
+    text-align: center;
 }
 
-.holder {
-    text-align: center;
+.holder .rm {
+    position: absolute;
+    top: 14%;
+    left: 12%;
 }
 
 .mWrapper {
@@ -20,7 +23,8 @@
     /* display: none; */
 }
 
-.mWrapper .w-head, .w-body {
+.mWrapper .w-head,
+.w-body {
     padding: 2%;
 }
 
