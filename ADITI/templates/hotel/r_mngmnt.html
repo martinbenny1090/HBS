@@ -3,7 +3,11 @@
 {% block title %} ADITI || HOTEL (Room Management) {% endblock %}
 
 {% block extra_head %} 
-<link rel="stylesheet" href="{% static 'css/subpage.css' %}">
+<link rel="stylesheet" href="{% static 'css/r_subpage.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+<script src="{% static 'js/hotel.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -11,16 +15,16 @@
 <body>
     <div class="container holder">
         <h1>Room Management</h1>
+        <div class="col rm">
+          <button type="submit" class="btn btn-primary d_view">NEW</button>
+        </div>
         <table class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">NO.</th>
                 <th scope="col">Room No.</th>
                 <th scope="col">Room Features</th>
-                <th scope="col"><!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                      New
-                  </button></th>
+                
                 <th></th>
                 <th></th>
                 <th></th>
@@ -57,7 +61,7 @@
           </table>
     </div>
     <!-- Modal -->
-  <form action="{% url 'hotelapp:roomsadd' %}" method="POST" enctype="multipart/form-data">
+  <!-- <form action="{% url 'hotelapp:roomsadd' %}" method="POST" enctype="multipart/form-data">
  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -101,7 +105,67 @@
      </div>
  </div>
 </div>
-</form>
+</form> -->
+<div class="mWrapper">
+
+  <div class="row w-head">
+    <h1>Room Management</h1>
+  </div>
+
+  <div class="row w-body">
+
+    <div class="col w-left">
+      <form>
+        <div class="form-group">
+          <label for="">Room No</label>
+          <input type="text" class="form-control" placeholder="Room No">
+        </div>
+        <div class="form-group">
+          <label for="">Price</label>
+          <input type="text" class="form-control" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="">Tax</label>
+          <input type="text" class="form-control" placeholder="Tax">
+        </div>
+        <div class="form-group">
+          <label for="">Room Thumbnail</label>
+          <input type="file" class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 1</label>
+          <input type="file" class="form-control" >
+        </div>
+      </form>
+    </div>
+
+    <div class="col w-right">
+      <form>
+        <div class="form-group">
+          <label for="">Room Type</label>
+          <select class="form-control" >
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 2</label>
+          <input type="file" class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 3</label>
+          <input type="file" class="form-control" >
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="btns">
+    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+    <button type="submit" class="btn btn-secondary">SAVE</button>
+  </div>
+
+</div>
 </body>
 
 {% endblock %}
