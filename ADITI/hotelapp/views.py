@@ -69,10 +69,7 @@ def roomsadd(request):
 
 
 def room_management(request):
-    if request.CustomUser.is_hotel == 'True':
-        return render(request, 'hotel/r_mngmnt.html')
-    else:
-        return redirect('hotelapp:hlogin')
+    return render(request, 'hotel/r_mngmnt.html')
     
 
 
