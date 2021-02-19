@@ -86,3 +86,6 @@ def user_detail(request):
         return redirect('user_detail')
     else:
         return render(request, 'user/userDetails.html')
+
+
+    

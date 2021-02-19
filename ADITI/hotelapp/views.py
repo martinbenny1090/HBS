@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from user.models import CustomUser
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from .models import Hotel, Room
 # Create your views here.
 
 def hsignup(request):
@@ -10,6 +11,7 @@ def hsignup(request):
         hname = request.POST['hname']
         location = request.POST['location']
         email = request.POST['email']
+        landmark = request.POST['landmark']
         zip_code = request.POST['zip_code']
         phone = request.POST['phone']
         pass1 = request.POST['pass1']
@@ -51,21 +53,27 @@ def roomsadd(request):
     '''model page to the room adding to the database'''
     error_msg=None
     if request.method == 'POST':
-        rname = request.POST['rname']
+        r_no = request.POST['r_no']
         price = request.POST['price']
         tax = request.POST['tax']
+        dis = request.POST['dis']
+        R_type = request.POST['r_type']
         image = request.FILES['image']
-        image1 = request.FILES['image1']
-        image2 = request.FILES['image2']
-        image3 = request.FILES['image3']
-        R_type = request.POST['R_type']
-        print(rname)
+        image1 = request.FILES['img1']
+        image2 = request.FILES['img2']
+        image3 = request.FILES['img3']
+        print(r_no)
+        return redirect('hotelapp:r_management')
     else:    
         return render(request, 'hotel/r_mngModel.html')
 
 
 def room_management(request):
-    return render(request, 'hotel/r_mngmnt.html')
+    if request.CustomUser.is_hotel == 'True':
+        return render(request, 'hotel/r_mngmnt.html')
+    else:
+        return redirect('hotelapp:hlogin')
+    
 
 
 def analytics(request):
@@ -82,6 +90,7 @@ def Payout(request):
 
 def Payment(request):
     return render(request, 'hotel/pymnt.html')
+
 
 def booking_management(request):
     return render(request, 'hotel/b_mngmnt.html')
