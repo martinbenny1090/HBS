@@ -2,6 +2,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+    overflow-x: hidden;
  }
  p{
      font-size: 1.1em;
@@ -34,11 +35,17 @@ a:focus{
     height:1px;
     border-bottom: 1px dashed #ddd;
 }
+.head {
+    height: 80px;
+    background: #005086;
+}
 .wrapper{
+    /* margin: 80px 0 0 0; */
     display: flex;
     width:100%;
     align-items:stretch; 
     position: absolute;
+    height: 100%;
 }
 #sidebar{
     min-width:250px;
