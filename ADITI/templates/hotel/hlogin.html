@@ -20,7 +20,8 @@
             <div class="card-body">
                 <h1 class="card-title text-center title">HOTEL LOGIN</h1>
                 <div class="card-text">
-                    <form method="POST" action="{% url 'hotelapp:hlogin' %}"> {% csrf_token %}
+                    <form method="POST" action="{% url 'hotelapp:hlogin' %}"> 
+                        {% csrf_token %}
                         <div class="form-group">
                             <input type="email" name="email" class="form-control form-control-sm form-control-xs" id="emailInput1" placeholder="Test@gmail.com">
                         </div>

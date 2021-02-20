@@ -9,7 +9,7 @@ def hsignup(request):
     error_msg=None
     if request.method == 'POST':
         hname = request.POST['hname']
-        location = request.POST['location']
+        city = request.POST['city']
         email = request.POST['email']
         landmark = request.POST['landmark']
         zip_code = request.POST['zip_code']
@@ -22,6 +22,8 @@ def hsignup(request):
         elif pass1==pass2:
             h =CustomUser.objects.create_user(username=email, password=pass2, email=email, phone=phone, is_hotel=True, is_staff=True)
             h.save()
+            hotel = Hotel(Hname=hname, city=city, landmark=landmark, email=email, zip_code=zip_code, phone=phone)
+            hotel.save()
             return redirect('hotelapp:hlogin')
         else:
             error_msg='Passwoed not matching'
@@ -55,19 +57,21 @@ def roomsadd(request):
     if request.method == 'POST':
         r_no = request.POST['r_no']
         price = request.POST['price']
+        discount = request.POST['discount']
         tax = request.POST['tax']
-        dis = request.POST['dis']
         R_type = request.POST['r_type']
         image = request.FILES['image']
         image1 = request.FILES['img1']
         image2 = request.FILES['img2']
         image3 = request.FILES['img3']
         print(r_no)
+        room = Room(HotelName=request.user, Rno=r_no, price=price, discount=discount, tax=tax, image=image, img1=image1, img2=image2, img3=image3)
+        room.save()
         return redirect('hotelapp:r_management')
     else:    
         return render(request, 'hotel/r_mngModel.html')
 
-
+@login_required(login_url='hotelapp:hlogin')
 def room_management(request):
     return render(request, 'hotel/r_mngmnt.html')
     

@@ -30,4 +30,4 @@ class Room(models.Model):
     tax = models.IntegerField(blank=True, null=True, default=0)
 
     def __str__(self):
-        return self.Rno
+        return str(self.Rno)
