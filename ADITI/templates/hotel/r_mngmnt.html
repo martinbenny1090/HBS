@@ -13,10 +13,58 @@
 {% block content %}
 
 <body>
+
   <div class="container holder">
     <h1>Room Management</h1>
     <div class="col rm">
       <button type="submit" class="btn btn-primary d_view">NEW</button>
+
+    <div class="container holder">
+        <h1>Room Management</h1>
+        <div class="col rm">
+          <button type="submit" class="btn btn-primary d_view" >NEW</button>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">NO.</th>
+                <th scope="col">Room No.</th>
+                <th scope="col">Room Features</th>
+                
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>155</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <table class="table table-striped">
       <thead>
@@ -108,6 +156,9 @@
 </form> -->
   <div class="mWrapper">
 
+<!-- <div class="mWrapper">
+<div class="mWrapper">
+
     <div class="row w-head">
       <h1>Room Management</h1>
     </div>
@@ -177,4 +228,174 @@
   </div>
 </body>
 
+  <div class="row w-head">
+    <h1>Room Management</h1>
+  </div>
+
+  <div class="row w-body">
+
+    <div class="col w-left">
+      <form method="POST" action="{% url 'hotelapp:roomsadd' %}" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="">Room No</label>
+          <input type="text" name="rname" class="form-control" placeholder="Room No">
+        </div>
+        <div class="form-group">
+          <label for="">Price</label>
+          <input type="text" class="form-control" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="">Tax</label>
+          <input type="text" class="form-control" placeholder="Tax">
+        </div>
+        <div class="form-group">
+          <label for="">Room Thumbnail</label>
+          <input type="file" class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 1</label>
+          <input type="file" class="form-control" >
+        </div>
+      </form>
+    </div>
+
+    <div class="col w-right">
+      <form>
+        <div class="form-group">
+          <label for="">Room Type</label>
+          <select class="form-control" >
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 2</label>
+          <input type="file" class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="">Room Image 3</label>
+          <input type="file" class="form-control" >
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="btns">
+    <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+    <button type="submit" class="btn btn-secondary">SAVE</button>
+  </div>
+
+</div>
+</body> -->
+<div class="global-container mWrapper">
+  <div class="card signup-form">
+      <div class="card-body">
+          <h1 class="card-title text-center title"></h1>
+          <div class="card-text">
+              <form method="POST" action="{% url 'hotelapp:roomsadd' %}" enctype="multipart/form-data" > {% csrf_token %}
+                   
+                  <div class="form-group name">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Room No </label>
+                      </div>
+                      <div class="col">
+                        <input type="text" name="r_no" class="form-control form-control-sm form-control-xs" placeholder="" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Price </label>
+                      </div>
+                      <div class="col">
+                        <input type="text" name="price" class="form-control form-control-sm form-control-xs" placeholder="" required>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Discount </label>
+                      </div>
+                      <div class="col">
+                        <input type="text" name="discount" class="form-control form-control-sm form-control-xs" placeholder="" required>
+                      </div>
+                    </div>
+                </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Tax </label>
+                      </div>
+                      <div class="col">
+                        <input type="text" name="tax" class="form-control form-control-sm form-control-xs" placeholder="" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                    <label  class="form-label">Select Room Type </label>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-select-lg mb-3" name="r_type" aria-label=".form-select-lg example" required>
+                      <option selected>select roomm type</option>
+                      <option value="1">Hotel</option>
+                      <option value="2">Home Stay</option>
+                      <option value="3">Rental Home</option>
+                      <option value="4">Canopies</option>
+                      <option value="5">Huts</option>
+                    </select> 
+                  </div>
+                  </div>                          
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Room Thumbnail </label>
+                      </div>
+                      <div class="col">
+                        <input type="file" name="image" class="form-control form-control-sm form-control-xs" accept="image/*" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Room image 1 </label>
+                      </div>
+                      <div class="col">
+                        <input type="file" name="img1" class="form-control form-control-sm form-control-xs" accept="image/*" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Room image 2 </label>
+                      </div>
+                      <div class="col">
+                        <input type="file" name="img2" class="form-control form-control-sm form-control-xs" accept="image/*" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label  class="form-label">Room image 3 </label>
+                      </div>
+                      <div class="col">
+                        <input type="file" name="img3" class="form-control form-control-sm form-control-xs" accept="image/*" required>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block signup">save</button></div>
+                  <div style="float: right;" class="mt-5 aha"><a href="{% url 'hotelapp:r_management' %}">Cancle</a></div>
+              </form>
+          </div>
+      </div>
+      
+  </div>
 {% endblock %}
