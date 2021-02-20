@@ -1,0 +1,53 @@
+{% extends 'hotel/hbase.html'%}
+{% load static %}
+{% block title %} ADITI || HOTEL (Hotel List) {% endblock %}
+
+{% block extra_head %} 
+
+<link rel="stylesheet" href="{% static 'css/subpage.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container holder">
+        <h1>Hotel List</h1>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">NO.</th>
+                <th scope="col">Hotel Name</th>
+                <th scope="col">Hotel Address</th>
+                <th scope="col">Phone NO.</th>
+                <th scope="col">Location</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends 'user/base.html'%}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
+
+
+{% block title %} ADITI || USER-HOME {% endblock %}
+
+{% block content %}
+<header class="uhHeader">
+    <div class="superBtn" style="float: left;"><i class="fas fa-bars "></i></div>
+    <div class="auth" style="float: right;"><a href="{% url 'login' %}">Login</a>|<a href="{% url 'register' %}">SignUp</a></div>
+</header>
+
+<div class="card hero__container">
+    <div class="card-body hero__content">
+        <div class="loc">
+            <label for="location">Location :</label>
+            <select id="loc" class="form-control">
+                <option selected>Choose Location</option>
+                <option value="">Addu City</option>
+                <option value="">Dhidhdhoo</option>
+                <option value="">Kulhudhuffushi</option>
+                <option value="">Eydhafushi</option>
+                <option value="">Farukolhufunadhoo</option>
+                <option value="">Felidhoo</option>
+                <option value="">Funadhoo</option>
+                <option value="">Fuvahmulah</option>
+                <option value="">Gan</option>
+                <option value="">Hinnavaru</option>
+                <option value="">Hithadhoo</option>
+                <option value="">Hulhumalé</option>
+                <option value="">Hulhumeedhoo</option>
+                <option value="">Kudahuvadhoo</option>
+                <option value="">Magoodhoo</option>
+                <option value="">Mahibadhoo</option>
+                <option value="">Malé</option>
+                <option value="">Manadhoo</option>
+                <option value="">Maroshi</option>
+                <option value="">Meedhoo</option>
+                <option value="">Mula</option>
+                <option value="">Naifaru</option>
+                <option value="">Nolhivaranfaru</option>
+                <option value="">Thinadhoo</option>
+                <option value="">Ungoofaaru</option>
+                <option value="">Veymandhoo</option>
+                <option value="">Veymandoo</option>
+                <option value="">Viligili</option>
+            </select>
+        </div>
+        <div class="chkIn">
+            <label for="checkIn">Check-In</label>
+            <input type="date" id="checkIn" class="form-control">
+        </div>
+        <div class="chkOut">
+            <label for="checkOut">Check-Out</label>
+            <input type="date" id="checkOut" class="form-control">
+        </div>
+        <div class="rooms">
+            <label for="rooms">Rooms</label>
+            <select id="rooms" class="form-control">
+                <option selected>Rooms</option>
+                <option value="">Single</option>
+                <option value="">Double</option>
+                <option value="">Triple</option>
+                <option value="">Quad</option>
+                <option value="">Queen</option>
+                <option value="">King</option>
+                <option value="">Twin</option>
+                <option value="">Double-double</option>
+                <option value="">Studio</option>
+            </select>
+        </div>
+        <div class="adults">
+            <label for="adults">Adults</label>
+            <select id="adlts" class="form-control">
+                <option selected>Adults</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+            </select>
+        </div>
+        <div class="children">
+            <label for="chld">Children</label>
+            <select id="chld" class="form-control">
+                <option selected>Children</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">More than 5</option>
+            </select>
+        </div>
+        <div class="srch">
+            <button type="submit" class="btn btn-primary src">SEARCH</button>
+        </div>
+    </div>
+</div>   
+<div class="container-fluid homeAd">
+    <div class="row homeAd__content">
+
+        <div class="col-sm display__tiles">
+            <div class="row">
+                <div class="col-sm dt-body">
+                    <div class="mainTxt">
+                        <h2 class="highlight">
+                            PREMIUM
+                        </h2>
+                        <h2>HOTELS</h2>
+                    </div>
+                    <div class="subTxt">
+                        <h6>TAILOR-MADE <br>FOR YOU</h6>
+                    </div>
+                    <div class="exp">
+                        <button type="submit" class="explr">EXPLORE NOW</button>
+                    </div>
+                </div>
+                <div class="col-sm dt-img">
+                    <img src="{% static '/image/tile1.jpg' %}" alt="" style="width: 320px; height: 200px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm display__tiles">
+            <div class="row">
+                <div class="col-sm dt-body">
+                    <div class="mainTxt secTil" >
+                        <h2>ROOMS FOR</h2>            
+                        <h2 class="highlight">TWO</h2>                
+                    </div>
+                    <div class="subTxt sb-secTil">
+                        <h6>SPEND GREAT <br>TIME TOGETHER</h6>
+                    </div>
+                    <div class="exp st">
+                        <button type="submit" class="explr ste">EXPLORE NOW</button>
+                    </div>
+                </div>
+                <div class="col-sm dt-img">
+                    <img src="{% static '/image/tile2.jpg' %}" alt="" style="width: 320px; height: 200px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm offer__tile">
+            <div class="row">
+                <div class="col offerPer">
+                    <h1>80%</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contentHead">
+    <div class="card cityHead container">
+        <div class="card-body">
+            <h1>POPULAR CITIES IN MALDIVES</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row glry" id="gallery" data-toggle="modal" data-target="#exampleModal">
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>BAA TOLL</h2>
+        <img class="w-100"
+            src="{% static '/image/BAATOLL.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="0">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>DHIGURAH</h2>
+        <img class="w-100"
+            src="{% static '/image/dhigurah.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="1">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 im-ct">
+        <h2>THULISDHOO</h2>
+        <img class="w-100"
+            src="{% static '/image/thuldhoo.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    
+</div>
+
+<div class="contentHead">
+    <div class="card cityHead container">
+        <div class="card-body">
+            <h1>BROWSE BY PROPERTY TYPE</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row prprty" id="gallery" data-toggle="modal" data-target="#exampleModal">
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HOTELS</h2>
+        <img class="w-100"
+            src="{% static '/image/Hotels.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="0">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HOME STAY</h2>
+        <img class="w-100"
+            src="{% static '/image/homeStay.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="1">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>RENTAL HOMES</h2>
+        <img class="w-100"
+            src="{% static '/image/rental_homes.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>CANOPIES</h2>
+        <img class="w-100"
+            src="{% static '/image/canopies.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 im-ct">
+        <h2>HUTS</h2>
+        <img class="w-100"
+            src="{% static '/image/huts.jpg' %}"
+            alt="First slide" data-target="#carouselExample" data-slide-to="2">
+    </div>
+    
+</div>
+
+{% endblock %}

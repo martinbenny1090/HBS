@@ -1,0 +1,71 @@
+{% extends 'user/base.html'%}
+{% load static %}
+
+{% block extra_head %}
+
+<link rel="stylesheet" href="{% static 'css/bookNow.css' %}">
+<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+    <script src="https://kit.fontawesome.com/0f9d35a558.js" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+{% block title %} ADITI || Book Now {% endblock %}
+
+{% block content %}
+
+</head>
+<header class="uHeader">
+    <div class="Noti" style="float: right;"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="#"
+            class="pro">Username</a></div>
+</header>
+
+<body>
+    <div class="row feature">
+        <div class="col-sm-4 col-lg-4 ftImgs">
+            <img src="{% static 'image/im1.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-4 col-lg-4 ftImgs">
+            <img src="{% static 'image/im2.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-4 col-lg-4 ftImgs">
+            <img src="{% static 'image/im3.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <div class="row coreSection">
+        <div class="col-sm-4 col-lg-4 selIm">
+            <img src="{% static 'image/im3.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-6 col-lg-6 htDtl">
+            <h2 class="Hdng">Marriot Hotel</h2>
+            <sub class="f-sb">Near Lulu Mall, Edapally, Eranakulam</sub>
+            <div class="notice row">
+                <div class="rate">4.5 <i class="fa fa-star" aria-hidden="true"></i></div>
+                <sub class="s-sb">(717 Ratings) Good</sub>
+
+            </div>
+            <div class="notice2 row">
+                <div><i class="fa fa-wifi" aria-hidden="true"></i>wifi</div>
+                <div><i class="fas fa-parking    "></i>Parking</div>
+                <div><i class="fas fa-water    "></i>Hot Water</div>
+                <div><i class="fa fa-check-circle" aria-hidden="true"></i>Center Table</div>
+            </div>
+            <div class="highlightSec row">
+                <div>Sanitized Stay</div>
+            </div>
+            <div class="row offer">
+                <div class="ofrPrc"><i class="fas fa-rupee-sign    "></i>500</div>
+                <div class="strk"><strike><i class="fas fa-rupee-sign    "></i>906</strike></div>
+                <div class="dsc">39% off</div>
+            </div>
+            <div class="row btns">
+                <div><button type="button" class="vd">View Details</button></div>
+                <div><a href="{% url 'user_detail' %}"><button type="button" class="bn">Book Now</button></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

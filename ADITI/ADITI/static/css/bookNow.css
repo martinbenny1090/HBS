@@ -1,0 +1,122 @@
+html,
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    /* background: url(../images/userHOme.jpg) center; */
+    overflow-x: hidden;
+}
+
+.uHeader {
+    background-color: #1ee6dc;
+    height: 10%;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.uHeader a {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+
+.feature {
+    width: 100%;
+    height: 50%;
+}
+
+.feature .ftImgs, img {
+    height: 100%;
+}
+
+.coreSection {
+    height: 50%;
+    width: 100%;
+    padding: 20px;
+}
+
+.coreSection .selIm {
+    height: 100%;
+    padding: 85px;
+}
+
+.coreSection .htDtl {
+    padding-top: 85px;
+}
+
+.coreSection .htDtl .notice {
+    margin: 5px;
+}
+
+.coreSection .htDtl .notice .rate {
+    background: rgb(99, 255, 99);
+    color: white;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+.coreSection .htDtl .notice .s-sb {
+    margin: 11px 0 0 16px;
+}
+
+.coreSection .htDtl .notice2 {
+    margin: 10px 0 0 6px;
+}
+
+.coreSection .htDtl .notice2 div {
+    margin: 0 30px 0 0;
+}
+
+.coreSection .htDtl .highlightSec {
+    margin: 6px;
+}
+
+.coreSection .htDtl .highlightSec div {
+    width: auto;
+    padding: 5px;
+    background: skyblue;
+    color: white;
+    border-radius: 3px;
+}
+
+.coreSection .htDtl .offer {
+    margin: 6px;
+}
+
+.coreSection .htDtl .offer div {
+    margin: 0 30px 0 0;
+}
+
+.coreSection .htDtl .offer .ofrPrc {
+    color: green;
+}
+
+.coreSection .htDtl .offer .dsc {
+    color: red;
+}
+
+.coreSection .htDtl .btns {
+    margin: 6px;
+}
+
+.coreSection .htDtl .btns div {
+    margin: 0 30px 0 0;
+}
+
+.coreSection .htDtl .btns .vd {
+    background: gray;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0 8px 0 8px;
+    border-radius: 10px;
+}
+
+.coreSection .htDtl .btns .bn {
+    background: rgb(123, 11, 197);
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0 8px 0 8px;
+    border-radius: 10px;
+}

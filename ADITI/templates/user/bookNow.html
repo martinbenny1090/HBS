@@ -17,8 +17,8 @@
 
 </head>
 <header class="uHeader">
-    <div class="Noti" style="float: right;"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="#"
-            class="pro">Username</a></div>
+    <div class="Noti" style="float: right;"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="{% url 'profile' %}"
+            class="pro">{{user.first_name}} {{user.last_name}}</a></div>
 </header>
 
 <body>
