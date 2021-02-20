@@ -59,11 +59,8 @@
             <div>AADHAR / PASSPORT / GOVT ID :</div>
         </div>
         <div class="col rightpart">
-<<<<<<< HEAD
             <form method="POST" action="{% url 'user_detail' %}" enctype="multipart/form-data" > 
                 {% csrf_token %}
-=======
->>>>>>> 881ed53629a8350db91e38652c30075264832d39
             <div class="form-group">
                 <input type="text" name="name" class="form-control form-control-sm form-control-xs in1" id="textInput1" value="{{ user.first_name }}" required >
             </div>
@@ -71,16 +68,12 @@
                 <input type="text" name="surname" class="form-control form-control-sm form-control-xs in1" id="textInput1" value="{{ user.last_name }}" required >
             </div>
             <div class="form-group">
-<<<<<<< HEAD
                 <select name="gender" class="custom-select" 
             style="width:150px;"> 
             <option>Mail</option> 
-            <option>Femail</option> 
+            <option>Female</option> 
             <option>Others</option>  
         </select> 
-=======
-                <select name="gender" id="" class="form-control"></select>
->>>>>>> 881ed53629a8350db91e38652c30075264832d39
             </div>
             <div class="form-group">
                 <input type="date" name="dob" class="form-control form-control-sm form-control-xs in1" id="textInput1" required >
@@ -94,7 +87,6 @@
             <div class="form-group">
                 <input type="file" name="apg" class="form-control form-control-sm form-control-xs in1" id="textInput1" required >
             </div>
-<<<<<<< HEAD
         
         </form>
         
@@ -104,12 +96,5 @@
     <div class="row btns">
         <button type="button" class="btn btn-outline-secondary">Cancel</button>
         <button type="submit" class="btn btn-secondary">Save</button>
-=======
-        </div>
-    </div>
-    <div class="row btns">
-        <button type="button" class="btn btn-outline-secondary">Cancel</button>
-        <button type="button" class="btn btn-secondary">Save</button>
->>>>>>> 881ed53629a8350db91e38652c30075264832d39
     </div>
 {% endblock %}
