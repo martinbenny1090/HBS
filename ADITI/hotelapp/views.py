@@ -64,7 +64,7 @@ def roomsadd(request):
         image1 = request.FILES['img1']
         image2 = request.FILES['img2']
         image3 = request.FILES['img3']
-        print(r_no)
+        
         room = Room(HotelName=request.user, Rno=r_no, price=price, discount=discount, tax=tax, image=image, img1=image1, img2=image2, img3=image3)
         room.save()
         return redirect('hotelapp:r_management')
